@@ -9,6 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     @State var color: UIColor = .red
+    var cgColor: Binding<CGColor> {
+        Binding<CGColor>(
+            get: { color.cgColor },
+            set: { color = UIColor(cgColor: $0) }
+        )
+    }
 
     var body: some View {
         NavigationView {
@@ -23,8 +29,8 @@ struct ContentView: View {
                     TextField("color:", value: $color, format: .uiColor.prefix(.none))
                         .autocapitalization(.allCharacters)
                     Rectangle().fill(Color(color))
-                        .overlay(Text(color, format: .uiColor.alpah().mark())
-                                    .foregroundColor(.secondary))
+                        .overlay(Text(color, format: .uiColor.alpah().mark()))
+                    ColorPicker("颜色选择", selection: cgColor, supportsOpacity: true)
                 }
             }
             .navigationTitle("自定义FormatStyle演示")
