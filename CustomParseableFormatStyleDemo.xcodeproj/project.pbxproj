@@ -34,6 +34,7 @@
 /* Begin PBXFileReference section */
 		769F4BED2705242700F8DA26 /* CustomParseableFormatStyleDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomParseableFormatStyleDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		769F4BEF2705242700F8DA26 /* CustomParseableFormatStyleDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomParseableFormatStyleDemoTests.swift; sourceTree = "<group>"; };
+		769F4BF62705252400F8DA26 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		76B0CDD92704917C005E2B94 /* CustomParseableFormatStyleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomParseableFormatStyleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76B0CDDC2704917C005E2B94 /* CustomParseableFormatStyleDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomParseableFormatStyleDemoApp.swift; sourceTree = "<group>"; };
 		76B0CDDE2704917C005E2B94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		76B0CDD02704917C005E2B94 = {
 			isa = PBXGroup;
 			children = (
+				769F4BF62705252400F8DA26 /* README.md */,
 				76B0CDDB2704917C005E2B94 /* CustomParseableFormatStyleDemo */,
 				769F4BEE2705242700F8DA26 /* CustomParseableFormatStyleDemoTests */,
 				76B0CDDA2704917C005E2B94 /* Products */,
