@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		769F4BF02705242700F8DA26 /* CustomParseableFormatStyleDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F4BEF2705242700F8DA26 /* CustomParseableFormatStyleDemoTests.swift */; };
 		76B0CDDD2704917C005E2B94 /* CustomParseableFormatStyleDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B0CDDC2704917C005E2B94 /* CustomParseableFormatStyleDemoApp.swift */; };
 		76B0CDDF2704917C005E2B94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B0CDDE2704917C005E2B94 /* ContentView.swift */; };
 		76B0CDE12704917D005E2B94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76B0CDE02704917D005E2B94 /* Assets.xcassets */; };
@@ -20,7 +21,19 @@
 		76B0CDF9270492F8005E2B94 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76B0CDFB270492F8005E2B94 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		769F4BF12705242700F8DA26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76B0CDD12704917C005E2B94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76B0CDD82704917C005E2B94;
+			remoteInfo = CustomParseableFormatStyleDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		769F4BED2705242700F8DA26 /* CustomParseableFormatStyleDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomParseableFormatStyleDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		769F4BEF2705242700F8DA26 /* CustomParseableFormatStyleDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomParseableFormatStyleDemoTests.swift; sourceTree = "<group>"; };
 		76B0CDD92704917C005E2B94 /* CustomParseableFormatStyleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomParseableFormatStyleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76B0CDDC2704917C005E2B94 /* CustomParseableFormatStyleDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomParseableFormatStyleDemoApp.swift; sourceTree = "<group>"; };
 		76B0CDDE2704917C005E2B94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +50,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		769F4BEA2705242700F8DA26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		76B0CDD62704917C005E2B94 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -47,10 +67,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		769F4BEE2705242700F8DA26 /* CustomParseableFormatStyleDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				769F4BEF2705242700F8DA26 /* CustomParseableFormatStyleDemoTests.swift */,
+			);
+			path = CustomParseableFormatStyleDemoTests;
+			sourceTree = "<group>";
+		};
 		76B0CDD02704917C005E2B94 = {
 			isa = PBXGroup;
 			children = (
 				76B0CDDB2704917C005E2B94 /* CustomParseableFormatStyleDemo */,
+				769F4BEE2705242700F8DA26 /* CustomParseableFormatStyleDemoTests */,
 				76B0CDDA2704917C005E2B94 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				76B0CDD92704917C005E2B94 /* CustomParseableFormatStyleDemo.app */,
+				769F4BED2705242700F8DA26 /* CustomParseableFormatStyleDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +130,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		769F4BEC2705242700F8DA26 /* CustomParseableFormatStyleDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 769F4BF52705242700F8DA26 /* Build configuration list for PBXNativeTarget "CustomParseableFormatStyleDemoTests" */;
+			buildPhases = (
+				769F4BE92705242700F8DA26 /* Sources */,
+				769F4BEA2705242700F8DA26 /* Frameworks */,
+				769F4BEB2705242700F8DA26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				769F4BF22705242700F8DA26 /* PBXTargetDependency */,
+			);
+			name = CustomParseableFormatStyleDemoTests;
+			productName = CustomParseableFormatStyleDemoTests;
+			productReference = 769F4BED2705242700F8DA26 /* CustomParseableFormatStyleDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		76B0CDD82704917C005E2B94 /* CustomParseableFormatStyleDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76B0CDE72704917D005E2B94 /* Build configuration list for PBXNativeTarget "CustomParseableFormatStyleDemo" */;
@@ -127,6 +175,10 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					769F4BEC2705242700F8DA26 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 76B0CDD82704917C005E2B94;
+					};
 					76B0CDD82704917C005E2B94 = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -147,11 +199,19 @@
 			projectRoot = "";
 			targets = (
 				76B0CDD82704917C005E2B94 /* CustomParseableFormatStyleDemo */,
+				769F4BEC2705242700F8DA26 /* CustomParseableFormatStyleDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		769F4BEB2705242700F8DA26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		76B0CDD72704917C005E2B94 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,6 +225,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		769F4BE92705242700F8DA26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				769F4BF02705242700F8DA26 /* CustomParseableFormatStyleDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		76B0CDD52704917C005E2B94 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -182,6 +250,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		769F4BF22705242700F8DA26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76B0CDD82704917C005E2B94 /* CustomParseableFormatStyleDemo */;
+			targetProxy = 769F4BF12705242700F8DA26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		76B0CDFB270492F8005E2B94 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
@@ -195,6 +271,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		769F4BF32705242700F8DA26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VFBLFL665K;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fatbobman.CustomParseableFormatStyleDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomParseableFormatStyleDemo.app/CustomParseableFormatStyleDemo";
+			};
+			name = Debug;
+		};
+		769F4BF42705242700F8DA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VFBLFL665K;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fatbobman.CustomParseableFormatStyleDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CustomParseableFormatStyleDemo.app/CustomParseableFormatStyleDemo";
+			};
+			name = Release;
+		};
 		76B0CDE52704917D005E2B94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -374,6 +496,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		769F4BF52705242700F8DA26 /* Build configuration list for PBXNativeTarget "CustomParseableFormatStyleDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				769F4BF32705242700F8DA26 /* Debug */,
+				769F4BF42705242700F8DA26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		76B0CDD42704917C005E2B94 /* Build configuration list for PBXProject "CustomParseableFormatStyleDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

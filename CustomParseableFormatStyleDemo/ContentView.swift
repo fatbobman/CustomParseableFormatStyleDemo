@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var color: UIColor = .red
+    @State var color: UIColor = try! UIColor("#FF0000") 
     var cgColor: Binding<CGColor> {
         Binding<CGColor>(
             get: { color.cgColor },
