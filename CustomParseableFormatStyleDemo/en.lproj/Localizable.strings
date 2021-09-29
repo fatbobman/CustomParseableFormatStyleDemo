@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  CustomParseableFormatStyleDemo
+
+  Created by Yang Xu on 2021/9/29.
+  
+*/
+"UIColorRedMark" = " Red:";
+"UIColorGreenMark" = " Green:";
+"UIColorBlueMark" = " Blue:";
+"UIColorAlphaMark" = " Alpha:";
