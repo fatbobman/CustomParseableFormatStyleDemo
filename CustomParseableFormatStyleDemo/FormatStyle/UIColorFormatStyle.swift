@@ -109,35 +109,3 @@ extension UIColorFormatStyle {
         return (prefix, red, green, blue, alphaString, redMark, greenMark, blueMark, alphaMark)
     }
 }
-
-extension UIColorFormatStyle: Codable {
-    static func == (lhs: UIColorFormatStyle, rhs: UIColorFormatStyle) -> Bool {
-        lhs.alpha == rhs.alpha && lhs.prefix == rhs.prefix && lhs.mark == rhs.mark
-    }
-
-    enum CodingKeys: String, CodingKey {
-        case prefix
-        case alpha
-        case mark
-    }
-
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        if let prefix = try? container.decodeIfPresent(Prefix.self, forKey: .prefix) {
-            self.prefix = prefix
-        }
-        if let alpha = try? container.decodeIfPresent(Alpha.self, forKey: .alpha) {
-            self.alpha = alpha
-        }
-        if let mark = try? container.decodeIfPresent(Mark.self, forKey: .mark) {
-            self.mark = mark
-        }
-    }
-
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(prefix, forKey: .prefix)
-        try container.encode(alpha, forKey: .alpha)
-        try container.encode(mark, forKey: .mark)
-    }
-}
