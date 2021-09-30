@@ -17,6 +17,10 @@ extension UIColor {
         format.format(self)
     }
 
+    func formatted() -> String {
+        UIColorFormatStyle().format(self)
+    }
+
     convenience init<T:ParseStrategy>(_ value: String, strategy: T = UIColorParseStrategy() as! T  ) throws where T.ParseOutput == UIColor {
         try self.init(cgColor: strategy.parse(value as! T.ParseInput).cgColor)
     }
