@@ -30,10 +30,10 @@ extension UIColorFormatStyle {
             let blueString = AttributedString(localized: "^[\(blue)](colorPart:'blue')", including: \.myApp)
             let alphaString = AttributedString(localized: "^[\(alpha)](colorPart:'alpha')", including: \.myApp)
 
-            let redMarkString = AttributedString(localized: "^[\(redMark)](colorPart:'mark')", including: \.myApp)
-            let greenMarkString = AttributedString(localized: "^[\(greenMark)](colorPart:'mark')", including: \.myApp)
-            let blueMarkString = AttributedString(localized: "^[\(blueMark)](colorPart:'mark')", including: \.myApp)
-            let alphaMarkString = AttributedString(localized: "^[\(alphaMark)](colorPart:'mark')", including: \.myApp)
+            let redMarkString = AttributedString(localized: "^[\(redMark)](colorPart:'mark')", locale: locale, including: \.myApp)
+            let greenMarkString = AttributedString(localized: "^[\(greenMark)](colorPart:'mark')", locale: locale, including: \.myApp)
+            let blueMarkString = AttributedString(localized: "^[\(blueMark)](colorPart:'mark')", locale: locale, including: \.myApp)
+            let alphaMarkString = AttributedString(localized: "^[\(alphaMark)](colorPart:'mark')", locale: locale, including: \.myApp)
 
             let result = prefixString + redMarkString + redString + greenMarkString + greenString + blueMarkString + blueString + alphaMarkString + alphaString
             return result
@@ -51,6 +51,20 @@ extension UIColorFormatStyle {
             var result = self
             result.alpha = value
             return result
+        }
+
+        func mark(_ value: Mark = .show) -> Self {
+            guard mark != value else { return self }
+            var result = self
+            result.mark = value
+            return result
+        }
+
+        func locale<T:FormatStyle>(_ locale: Locale) -> T {
+            guard self.locale != locale else { return self as! T }
+            var result = self
+            result.locale = locale
+            return result as! T
         }
     }
 }

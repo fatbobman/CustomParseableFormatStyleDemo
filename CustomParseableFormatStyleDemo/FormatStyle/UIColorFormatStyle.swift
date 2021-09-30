@@ -19,7 +19,7 @@ struct UIColorFormatStyle: ParseableFormatStyle {
     private var locale: Locale = .current
 
     var attributed: Attributed {
-        Attributed(prefix: prefix, alpha: alpha)
+        Attributed(prefix: prefix, alpha: alpha,mark: mark,locale: locale)
     }
 
     enum Prefix: Codable {
