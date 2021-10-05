@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 struct UIColorFormatStyle: ParseableFormatStyle {
     var parseStrategy: UIColorParseStrategy {
@@ -100,12 +101,37 @@ extension UIColorFormatStyle {
         var alphaMark = ""
 
         if mark == .show {
-            redMark = String(localized: "UIColorRedMark", locale: locale)
-            greenMark = String(localized: "UIColorGreenMark", locale: locale)
-            blueMark = String(localized: "UIColorBlueMark", locale: locale)
-            alphaMark = alpha == .show ? String(localized: "UIColorAlphaMark", locale: locale) : ""
+            redMark = getLocalizedString(.red, locale: locale)
+            greenMark = getLocalizedString(.green, locale: locale)
+            blueMark = getLocalizedString(.blue, locale: locale)
+            alphaMark = alpha == .show ? getLocalizedString(.alpha, locale: locale) : ""
         }
 
         return (prefix, red, green, blue, alphaString, redMark, greenMark, blueMark, alphaMark)
     }
+
+    static func getLocalizedString(_ markTag:MarkTag,locale:Locale) -> String{
+        let localeString = (locale.identifier.split(separator: "-").first ?? "en").uppercased()
+        return Self.localeString[localeString + "-" + markTag.rawValue] ?? Self.localeString["EN-" + markTag.rawValue]!
+    }
+
+    enum MarkTag:String{
+        case red
+        case green
+        case blue
+        case alpha
+    }
+
+    static let localeString:[String:String] = [
+        "EN-red":" Red:",
+        "EN-green":" Green:",
+        "EN-blue" : " Blue:",
+        "EN-alpha" : " Alpha:",
+        "ZH-red" : " 红:",
+        "ZH-green" : " 绿:",
+        "ZH-blue" : " 蓝",
+        "ZH-alpha" : " 透明度:"
+    ]
 }
+
+

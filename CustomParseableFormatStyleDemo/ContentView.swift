@@ -16,11 +16,16 @@ struct ContentView: View {
         )
     }
 
+    var colorLocalString:String {
+        UIColorFormatStyle().locale(Locale(identifier: "zh-cn")).mark().format(color)
+    }
+
     var body: some View {
         NavigationView {
             Form {
                 Section("String") {
                     Text(color, format: .uiColor)
+                    Text(colorLocalString)
                 }
                 Section("AttributedString") {
                     Text(colorAttributeString)

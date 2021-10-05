@@ -30,10 +30,10 @@ extension UIColorFormatStyle {
             let blueString = AttributedString(localized: "^[\(blue)](colorPart:'blue')", including: \.myApp)
             let alphaString = AttributedString(localized: "^[\(alpha)](colorPart:'alpha')", including: \.myApp)
 
-            let redMarkString = AttributedString(localized: "^[\(redMark)](colorPart:'mark')", locale: locale, including: \.myApp)
-            let greenMarkString = AttributedString(localized: "^[\(greenMark)](colorPart:'mark')", locale: locale, including: \.myApp)
-            let blueMarkString = AttributedString(localized: "^[\(blueMark)](colorPart:'mark')", locale: locale, including: \.myApp)
-            let alphaMarkString = AttributedString(localized: "^[\(alphaMark)](colorPart:'mark')", locale: locale, including: \.myApp)
+            let redMarkString = AttributedString(localized: "^[\(redMark)](colorPart:'mark')",  including: \.myApp)
+            let greenMarkString = AttributedString(localized: "^[\(greenMark)](colorPart:'mark')" ,including: \.myApp)
+            let blueMarkString = AttributedString(localized: "^[\(blueMark)](colorPart:'mark')" ,including: \.myApp)
+            let alphaMarkString = AttributedString(localized: "^[\(alphaMark)](colorPart:'mark')" ,including: \.myApp)
 
             let result = prefixString + redMarkString + redString + greenMarkString + greenString + blueMarkString + blueString + alphaMarkString + alphaString
             return result
