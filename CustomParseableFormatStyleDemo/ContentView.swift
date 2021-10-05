@@ -24,7 +24,8 @@ struct ContentView: View {
         NavigationView {
             Form {
                 Section("String") {
-                    Text(color, format: .uiColor)
+                    Text(color, format: .uiColor.mark())
+                        .environment(\.locale, Locale(identifier: "zh-cn"))
                     Text(colorLocalString)
                 }
                 Section("AttributedString") {
